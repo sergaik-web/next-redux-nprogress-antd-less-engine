@@ -1,0 +1,59 @@
+body {
+  font-family: Roboto, serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #222;
+}
+
+#__next {
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#nprogress .bar {
+  background: #053557;
+  height: 2px;
+}
+/* Fancy blur effect */
+#nprogress .peg {
+  box-shadow: 0 0 10px #053557, 0 0 5px #053557;
+}
+#nprogress .spinner-icon {
+  border-top-color: #053557;
+  border-left-color: #053557;
+}
+
+.table-column-left-shadow::after {
+  box-shadow: inset -10px 0 8px -8px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 1368px) {
+  .table-column-left-shadow::after {
+    box-shadow: none;
+  }
+}
+
+.table-box {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  .ant-pagination {
+    position: relative;
+    margin: 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .ant-pagination-options {
+    display: inline-block !important;
+  }
+}
+
+.context-main {
+  height: calc(100vh - 64px);
+}
+
+.ant-input-prefix {
+  color: black !important;
+}

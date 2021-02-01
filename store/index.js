@@ -1,0 +1,12 @@
+import {createStore, applyMiddleware} from 'redux';
+import {composeWithDevTools} from 'redux-devtools-extension';
+import thunkMiddleware from 'redux-thunk';
+import actions from './actions';
+
+import reducers from './reducers';
+
+function initializeStore(initialState = {}) {
+  return createStore(reducers, initialState, composeWithDevTools(applyMiddleware(thunkMiddleware)));
+}
+
+export {initializeStore, actions};
